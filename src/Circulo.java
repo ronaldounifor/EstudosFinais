@@ -1,7 +1,17 @@
 public class Circulo {
 
+    private Calculadora calculadora;
+
+    public Circulo(Calculadora calculadora) {
+        this.calculadora = calculadora;
+    }
+
     public double calcularArea(double raio) {
-        return raio*raio*3.14;
+
+        double area = calculadora.multiplicar(raio, raio);
+        area = calculadora.multiplicar(area, 3.14);
+
+        return area;
     }
 
 }
